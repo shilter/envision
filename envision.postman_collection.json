@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "c90b201f-4332-4232-816c-c99404bbc2d3",
+		"name": "envision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "list all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host-node}}users",
+							"host": [
+								"{{host-node}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host-node}}users/1",
+							"host": [
+								"{{host-node}}users"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\":\"feri\",\n    \"lastname\":\"andrianto\",\n    \"dateOfBirth\":\"13-02-1988\",\n    \"location\":\"banten\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host-node}}users/1",
+							"host": [
+								"{{host-node}}users"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\":\"ferri\",\n    \"lastname\":\"andrianto\",\n    \"dateOfBirth\":\"13-02-1988\",\n    \"location\":\"banten\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host-node}}users",
+							"host": [
+								"{{host-node}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host-node}}users/1",
+							"host": [
+								"{{host-node}}users"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "messages",
+			"item": [
+				{
+					"name": "list all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host-node}}message",
+							"host": [
+								"{{host-node}}message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host-node}}message/1",
+							"host": [
+								"{{host-node}}message"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"users\":2,\n    \"messages\":\"hello\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host-node}}message/1",
+							"host": [
+								"{{host-node}}message"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "created",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"users\":1,\n    \"messages\":\"hello\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host-node}}message",
+							"host": [
+								"{{host-node}}message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host-node}}message/1",
+							"host": [
+								"{{host-node}}message"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send brithday",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host-node}}message/name/1",
+							"host": [
+								"{{host-node}}message"
+							],
+							"path": [
+								"name",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host-node}}ping",
+					"host": [
+						"{{host-node}}ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
